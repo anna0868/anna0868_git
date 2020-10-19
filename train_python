@@ -1,0 +1,45 @@
+import re
+#%matplotlib inline
+import matplotlib.pyplot as plt
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.utils import to_categorical
+from sklearn.model_selection import train_test_split
+import numpy as np
+
+
+f = open('train.txt', 'r', encoding='utf-8')
+#f = open('train.txt', 'r', encoding='cp949')
+tagged_sentences = []
+sentence = []
+
+for line in f:
+    if len(line)==0 or line.startswith('-DOCSTART') or line[0]=="\n":
+        if len(sentence) > 0:
+            tagged_sentences.append(sentence)
+            sentence = []
+        continue
+    splits = line.split(' ') # 공백을 기준으로 속성을 구분한다.
+    splits[-1] = re.sub(r'\n', '', splits[-1]) # 줄바꿈 표시 \n을 제거한다.
+    word = splits[0].lower() # 단어들은 소문자로 바꿔서 저장한다.
+    sentence.append([word, splits[-1]]) # 단어와 개체명 태깅만 기록한다.
+
+
+print("전체 샘플 개수 : ", len(tagged_sentences)) # 전체 샘플의 개수 출력
+
+print("첫번째 샘플 출력 : ", tagged_sentences[0]) # 첫번째 샘플 출력
+
+
+sentences, ner_tags = [], []
+for tagged_sentence in tagged_sentences: # 14,041개의 문장 샘플을 1개씩 불러온다.
+    sentence, tag_info = zip(*tagged_sentence) # 각 샘플에서 단어들은 sentence에 개체명 태깅 정보들은 tag_info에 저장.
+    sentences.append(list(sentence)) # 각 샘플에서 단어 정보만 저장한다.
+    ner_tags.append(list(tag_info)) # 각 샘플에서 개체명 태깅 정보만 저장한다.
+
+for tagged_sentence in tagged_sentences:  # 14,041개의 문장 샘플을 1개씩 불러온다.
+    print("#####", zip(*tagged_sentence))
+
+
+print("sentences[:10]", sentences[:10])
+
+print("ner_tags[:10]", ner_tags[:10])
