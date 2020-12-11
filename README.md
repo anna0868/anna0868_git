@@ -39,12 +39,14 @@
 	python3 KoElectra_infer.py 
 	```​
 
+
 3. CNN model
 
 	- Train, Test CNN model
 	```bash
 	python3 CNN.py 
 	```​
+	
 
 4. RNN model
 
