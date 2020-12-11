@@ -16,5 +16,7 @@
 ### Metrics
 1. top-1, 3, 5, Accuracy : 각 class 별 정확도
 
-|class1|class2|class3|class4|
-|:------:|:------:|:---:|:---:|
+|class|Accuracy|
+|:------:|:------:|
+|1|0.8123|
+|2|0.1235|
