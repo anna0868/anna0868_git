@@ -199,7 +199,7 @@
 	|CNN|1.26 samples/ms|
 *latency : 평가 시 총 걸린 시간을 구해 test data의 갯수로 나누어 sample당 걸린시간(ms)을 측정하였다. 
 
-###결론
+### 결론
 각 모델별 f1 score(macro) 는 KoBERT 모델이 약 87%로 가장 높았고,  Electra 모델이 약 81%, RNN 모델 약 77%, CNN 모델 약 60%로 CNN이 가장 낮았다.
 각 모델별 속도는 CNN이 약 1.3 samples / ms 로 가장 빨랐고, KoBERT 모델이 약 1.1 samples / ms , KoElectra 모델이 0.9 samples / ms , RNN 모델이 0.2 samples / ms 로 RNN이 가장 느렸다.
 
