@@ -1,4 +1,4 @@
-egory Classification Task
+# Category Classification Task
 
 ### 모델설명
 - 가맹점 카드내역 데이터를 17가지의 주어진 카테고리로 분류하는 모델
@@ -15,4 +15,6 @@ egory Classification Task
 
 ### Metrics
 1. top-1, 3, 5, Accuracy : 각 class 별 정확도
-|class1|class2|class3|class4|class5|class6|class7|class8|class9|class10|
+
+|class1|class2|class3|class4|
+|:------:|:------:|:---:|:---:|
