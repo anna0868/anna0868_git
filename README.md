@@ -12,8 +12,48 @@
 	- 카테고리별 데이터 불균형 확인
 	
 	![데이터불균형확인](./데이터불균형확인.png)
+	
+### 학습 및 평가
+1. KoBERT model
+
+	1-1. Train KoBERT model
+	```
+	python3 KoBERT.py 
+	```
+	1-2. Test KoBERT model
+	```
+	python3 KoBERT_infer.py 
+	```​
+
+2. KoELECTRA model
+
+	1-1. Train KoELECTRA model
+	```
+	python3 KoElectra.py 
+	```
+	1-2. Test KoELECTRA model
+	```
+	python3 KoElectra_infer.py 
+	```​
+	
+3. CNN model
+
+	1. Train, Test CNN model
+	```
+	python3 CNN.py 
+	```​
+	
+4. RNN model
+
+	1. Train, Test RNN model
+	```
+	python3 RNN.py 
+	```
+
+
 ### Metrics
 1. 모델별 top-1, 3, 5, Accuracy : 각 class 별 정확도
+
 	1-1.KoBERT
 	|Class|top-1 Accuracy|top-3 Accuracy|top-5 Accuracy|
 	|:------:|:------:|:------:|:------:|
