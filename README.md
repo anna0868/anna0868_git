@@ -17,12 +17,12 @@
 1. KoBERT model
 
 	1-1. Train KoBERT model
-	```
+	```bash
 	python3 KoBERT.py 
 	```
 
 	1-2. Test KoBERT model
-	```
+	```bash
 	python3 KoBERT_infer.py
 	```
 
@@ -30,26 +30,26 @@
 2. KoELECTRA model
 
 	2-1. Train KoELECTRA model
-	```
+	```bash
 	python3 KoElectra.py 
 	```
 
 	2-2. Test KoELECTRA model
-	```
+	```bash
 	python3 KoElectra_infer.py 
 	```​
 
 3. CNN model
 
 	- Train, Test CNN model
-	```
+	```bash
 	python3 CNN.py 
 	```​
 
 4. RNN model
 
 	- Train, Test RNN model
-	```
+	```bash
 	python3 RNN.py 
 	```
 
