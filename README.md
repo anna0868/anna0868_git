@@ -17,8 +17,8 @@
 1. KoBERT model
 
 	1-1. Train KoBERT model
-	```python3 KoBERT.py 
-	```
+```python3 KoBERT.py 
+```
 	1-2. Test KoBERT model
 	```
 	python3 KoBERT_infer.py 
